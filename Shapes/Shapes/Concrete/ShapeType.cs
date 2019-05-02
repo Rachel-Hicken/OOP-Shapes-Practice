@@ -2,7 +2,6 @@
 {
     internal enum ShapeType
     {
-        Triangle,
         Circle,
         Square
     }
