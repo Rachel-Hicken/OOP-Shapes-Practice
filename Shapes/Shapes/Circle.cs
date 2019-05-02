@@ -1,23 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Shapes
+﻿namespace Shapes
 {
     class Circle : Shape
     {
-        private double radius;
+        private readonly double radius;
+        public override double Area => radius * radius * 3.14;
 
         public Circle(int radius)
         {
             this.radius = radius;
-        }
-
-        public override double GetArea()
-        {
-            return radius * radius * 3.14;
         }
     }
 }

@@ -11,16 +11,27 @@ namespace Shapes
         static void Main(string[] args)
         {
             Console.WriteLine("Test");
+//
+//            var square = new Square(2);
+//            var circle = new Circle(4);
+//            Console.WriteLine(square.Area);
+//            Console.WriteLine(circle.Area);
+//            Console.WriteLine(new SumShapes(new[]{square.Area,circle.Area}).totalSum);
 
-            var square = new Square(2);
-            var circle = new Circle(4);
-            var squareArea = square.GetArea();
-            var circleArea = circle.GetArea();
-            //var sumAreas = new SumShapes([squareArea, circleArea]);
-            Console.WriteLine(squareArea);
-            Console.WriteLine(circleArea);
-            //Console.WriteLine(sumAreas);
+//            var shapes = new List<IArea>{new Square(2),new Circle(4)};
+//            var areas = shapes.Select(o =>{Console.WriteLine(o.Area);return o.Area;}).ToArray();
+//            Console.WriteLine(new SumShapes(areas).totalSum);
+//            Console.ReadLine();
+
+
+            var shapes = new List<IArea>{new Square(2),new Circle(4)};
+            Console.WriteLine(new SumShapes(shapes.Select(o => { Console.WriteLine(o.Area);return o.Area;}).ToArray()).totalSum);
             Console.ReadLine();
         }
     }
 }
+///TODO:
+/// GetShape(enum,array or ints);
+/// ListOfShapes.AreaSum
+/// ListOfShapes IAreaSum and Shapes IArea
+/// use getters and interfaces
