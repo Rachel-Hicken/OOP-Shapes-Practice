@@ -18,8 +18,7 @@ namespace Shapes
             var circle2 = new Circle(1);
             var shapes = new List<Shape> { square, square2, circle, circle2 };
             var areas = shapes.Select(o => { Console.WriteLine(o.Area); return o.Area; }).ToArray();
-
-            Console.WriteLine(new SumShapes(areas).totalSum);
+            Console.WriteLine(areas.Sum());
             Console.ReadLine();
         }
     }
