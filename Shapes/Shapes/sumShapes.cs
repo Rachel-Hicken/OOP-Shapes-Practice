@@ -8,7 +8,8 @@ namespace Shapes
 {
     class SumShapes
     {
-        private double totalSum = 0;
+        public double totalSum = 0;
+
         public SumShapes(double[] shapesList)
         {
             foreach (double s in shapesList)

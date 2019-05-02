@@ -13,13 +13,13 @@ namespace Shapes
             Console.WriteLine("Test");
 
             var square = new Square(2);
+            var square2 = new Square(3);
             var circle = new Circle(4);
-            var squareArea = square.GetArea();
-            var circleArea = circle.GetArea();
-            //var sumAreas = new SumShapes([squareArea, circleArea]);
-            Console.WriteLine(squareArea);
-            Console.WriteLine(circleArea);
-            //Console.WriteLine(sumAreas);
+            var circle2 = new Circle(1);
+            var shapes = new List<Shape> { square, square2, circle, circle2 };
+            var areas = shapes.Select(o => { Console.WriteLine(o.Area); return o.Area; }).ToArray();
+
+            Console.WriteLine(new SumShapes(areas).totalSum);
             Console.ReadLine();
         }
     }
