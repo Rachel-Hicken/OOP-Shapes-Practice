@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Shapes
+namespace Shapes.Model.Abstract
 {
     public abstract class Shape:IArea
     {

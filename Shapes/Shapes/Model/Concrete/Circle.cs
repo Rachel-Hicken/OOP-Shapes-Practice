@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Shapes
+namespace Shapes.Model.Concrete
 {
     class Circle : Square
     {
@@ -10,13 +10,10 @@ namespace Shapes
             {
                 if (_area == 0.0)
                     _area = base.Area*Math.PI;
-//                _area = Math.Pow(dimensions[0],2)*Math.PI;
                 return _area;
             }
         }
 
-        public Circle(int[] dimensions) : base(dimensions)
-        {
-        }
+        public Circle(int[] dimensions) : base(dimensions){}
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Shapes
+﻿namespace Shapes.Model.Concrete
 {
     internal enum ShapeType
     {

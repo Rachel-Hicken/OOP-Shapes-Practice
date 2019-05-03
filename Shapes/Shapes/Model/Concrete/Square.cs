@@ -1,6 +1,7 @@
 ﻿using System;
+using Shapes.Model.Abstract;
 
-namespace Shapes
+namespace Shapes.Model.Concrete
 {
     public class Square : Shape
     {
@@ -16,8 +17,6 @@ namespace Shapes
             }
         }
         
-        public Square(int[] dimensions) : base(dimensions)
-        {
-        }
+        public Square(int[] dimensions) : base(dimensions){}
     }
 }

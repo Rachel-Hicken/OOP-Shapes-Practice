@@ -43,15 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Concrete\Circle.cs" />
-    <Compile Include="Abstract\IArea.cs" />
-    <Compile Include="Extensions\List.cs" />
+    <Compile Include="Model\Concrete\Circle.cs" />
+    <Compile Include="Model\Abstract\IArea.cs" />
+    <Compile Include="Model\Extensions\List.cs" />
+    <Compile Include="Model\Extensions\String.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Abstract\Shape.cs" />
-    <Compile Include="Concrete\ShapeType.cs" />
-    <Compile Include="Concrete\Square.cs" />
-    <Compile Include="ShapeFactory.cs" />
+    <Compile Include="Model\Abstract\Shape.cs" />
+    <Compile Include="Model\Concrete\ShapeType.cs" />
+    <Compile Include="Model\Concrete\Square.cs" />
+    <Compile Include="Factory\ShapeFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

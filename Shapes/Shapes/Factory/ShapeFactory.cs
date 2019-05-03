@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Shapes.Model.Abstract;
+using Shapes.Model.Concrete;
 
-namespace Shapes
+namespace Shapes.Factory
 {
     internal class ShapeFactory
     {

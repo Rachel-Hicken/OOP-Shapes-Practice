@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Shapes.Model.Abstract;
 
-namespace Shapes.Extensions
+namespace Shapes.Model.Extensions
 {
     internal static class List
     {
@@ -19,9 +18,17 @@ namespace Shapes.Extensions
         }
         internal static void ShowAreas<T>(this List<T> list) where T : IArea
         {
-            list.Select(o => { Console.WriteLine($"{o} {o.Area}");return o.Area;}).ToList();
+            list.Select(o => { Console.WriteLine($"{o.ToString().GetLastString('.')}'s area:  {o.Area}");return o.Area;}).ToList();
         }
-        
+
+        internal static void ShowShapes<T>(this List<T> shapes)where T : IArea
+        {
+            shapes.ShowAreas();
+            Console.WriteLine("\n----------------------------------------------\n");
+            Console.WriteLine($"Sum of Shape Areas: {shapes.SumAreaArray()}");
+
+            Console.ReadLine();
+        }
         
     }
 }
