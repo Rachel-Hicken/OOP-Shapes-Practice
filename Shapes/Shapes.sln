@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shapes", "Shapes\Shapes.csproj", "{46BB0A42-D8FA-4A57-88E5-9096B75CEFF0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProcessShapesWebApp", "ProcessShapesWebApp\ProcessShapesWebApp.csproj", "{DD45F1D6-0A1F-497F-BFBF-FCB4A0160AB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeLibrary", "ShapeLibrary\ShapeLibrary.csproj", "{5C0359EB-8DC3-4D06-BCDE-4C4A2F7F2CF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{46BB0A42-D8FA-4A57-88E5-9096B75CEFF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46BB0A42-D8FA-4A57-88E5-9096B75CEFF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46BB0A42-D8FA-4A57-88E5-9096B75CEFF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD45F1D6-0A1F-497F-BFBF-FCB4A0160AB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD45F1D6-0A1F-497F-BFBF-FCB4A0160AB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD45F1D6-0A1F-497F-BFBF-FCB4A0160AB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD45F1D6-0A1F-497F-BFBF-FCB4A0160AB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C0359EB-8DC3-4D06-BCDE-4C4A2F7F2CF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C0359EB-8DC3-4D06-BCDE-4C4A2F7F2CF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C0359EB-8DC3-4D06-BCDE-4C4A2F7F2CF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C0359EB-8DC3-4D06-BCDE-4C4A2F7F2CF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
