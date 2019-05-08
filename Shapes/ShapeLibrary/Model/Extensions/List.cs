@@ -30,7 +30,7 @@ namespace ShapeLibrary.Model.Extensions
             Console.ReadLine();
         }
 
-        public static List<IArea> ToIArea<T>(this IList<T> shapes) where T : Shape
+        public static IList<IArea> ToIArea<T>(this IList<T> shapes) where T : Shape
         {
             return shapes.Select(o => o as IArea).ToList();
         }
