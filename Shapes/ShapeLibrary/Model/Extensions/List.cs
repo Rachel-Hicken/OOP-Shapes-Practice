@@ -7,21 +7,21 @@ namespace ShapeLibrary.Model.Extensions
 {
     public static class List
     {
-        internal static double[] ToAreaArray<T>(this List<T> list) where T : IArea
+        internal static double[] ToAreaArray<T>(this IList<T> list) where T : IArea
         {
             return list.Select(o => o.Area).ToArray();
         }
 
-        public static double SumAreaArray<T>(this List<T> list) where T : IArea
+        public static double SumAreaArray<T>(this IList<T> list) where T : IArea
         {
             return list.ToAreaArray().Sum();
         }
-        internal static void ShowAreas<T>(this List<T> list) where T : IArea
+        internal static void ShowAreas<T>(this IList<T> list) where T : IArea
         {
             list.Select(o => { Console.WriteLine($"{o.ToString().GetLastString('.')}'s area:  {o.Area}");return o.Area;}).ToList();
         }
 
-        public static void ShowShapes<T>(this List<T> shapes)where T : IArea
+        public static void ShowShapes<T>(this IList<T> shapes)where T : IArea
         {
             shapes.ShowAreas();
             Console.WriteLine("\n----------------------------------------------\n");
@@ -30,7 +30,7 @@ namespace ShapeLibrary.Model.Extensions
             Console.ReadLine();
         }
 
-        public static List<IArea> ToIArea<T>(this List<T> shapes) where T : Shape
+        public static List<IArea> ToIArea<T>(this IList<T> shapes) where T : Shape
         {
             return shapes.Select(o => o as IArea).ToList();
         }

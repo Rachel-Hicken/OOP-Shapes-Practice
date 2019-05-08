@@ -18,6 +18,7 @@ namespace Shapes
 // 1. make main look like above
 // 2. display results in a web app  (extensions and referencing using different lib to get different behavior
 //        2a. do we need a class library
+//        2b.  create unit test to test library
 // 3. teach entity framework
 // 4. answer question that Rachel may have
 // 5. template pattern

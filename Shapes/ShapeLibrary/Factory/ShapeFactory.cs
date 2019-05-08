@@ -8,7 +8,7 @@ namespace ShapeLibrary.Factory
 {
     public class ShapeFactory
     {
-        private int HowManyShapesToCreate = 0;
+        private int _howManyShapesToCreate = 0;
         public static Shape CreateShape(ShapeType type, int[] dimensions)
         {
             switch (type)
@@ -24,7 +24,7 @@ namespace ShapeLibrary.Factory
 
         public ShapeFactory Create(int i)
         {
-            HowManyShapesToCreate = i;
+            _howManyShapesToCreate = i;
             return this;
         }
 
@@ -36,7 +36,7 @@ namespace ShapeLibrary.Factory
             var random = new Random();
 
             var shapes = new List<Shape>();
-            for (int i = 0; i <= HowManyShapesToCreate; i++)
+            for (int i = 0; i <= _howManyShapesToCreate; i++)
             {
                 shapes.Add(ShapeFactory.CreateShape((ShapeType)random.Next(maxType+1),new[]{random.Next(1,MAX_DIMENSION_SIZE)}));
             }
