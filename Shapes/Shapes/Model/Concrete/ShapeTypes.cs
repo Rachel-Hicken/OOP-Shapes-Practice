@@ -4,7 +4,7 @@
     {
         circle
         ,square
-        , triangle
-        , rectangle
+        //, triangle
+        //, rectangle
     }
 }
