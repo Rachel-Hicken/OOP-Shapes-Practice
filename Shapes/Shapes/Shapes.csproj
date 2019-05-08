@@ -43,14 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Circle.cs" />
+    <Compile Include="Model\Abstract\IArea.cs" />
+    <Compile Include="Model\Abstract\Shape.cs" />
+    <Compile Include="Model\Concrete\Circle.cs" />
+    <Compile Include="Model\Extension\List.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Shape.cs" />
-    <Compile Include="Square.cs" />
+    <Compile Include="Factory\ShapeFactory.cs" />
+    <Compile Include="Model\Concrete\ShapeTypes.cs" />
+    <Compile Include="Model\Concrete\Square.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
