@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using ShapeLibrary.Model.Abstract;
 using ShapeLibrary.Model.Concrete;
 
 namespace ShapeLibrary.Factory
 {
-    public class ShapeFactory
+    public abstract class ShapeFactory
     {
-        private int _howManyShapesToCreate = 0;
         public static Shape CreateShape(ShapeType type, int[] dimensions)
         {
             switch (type)
@@ -20,29 +17,6 @@ namespace ShapeLibrary.Factory
                 default:
                     throw new ArgumentOutOfRangeException(nameof(type), type, null);
             }
-        }
-
-        public ShapeFactory Create(int i)
-        {
-            _howManyShapesToCreate = i;
-            return this;
-        }
-
-
-        public List<Shape> RandomShapes()
-        {
-            const int MAX_DIMENSION_SIZE = 100;
-            var maxType = (int)Enum.GetValues(typeof(ShapeType)).Cast<ShapeType>().Max();
-            var random = new Random();
-
-            var shapes = new List<Shape>();
-            for (int i = 0; i <= _howManyShapesToCreate; i++)
-            {
-                shapes.Add(ShapeFactory.CreateShape((ShapeType)random.Next(maxType+1),new[]{random.Next(1,MAX_DIMENSION_SIZE)}));
-            }
-
-            return shapes;
-
         }
     }
 }

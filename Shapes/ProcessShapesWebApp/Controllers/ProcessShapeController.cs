@@ -9,8 +9,8 @@ namespace ProcessShapesWebApp.Controllers
         // GET: ProcessShape
         public ActionResult Index()
         {
-            var blah = new ShapeFactory().Create(10).RandomShapes().ToIArea();
-            return View(blah);
+            var shapes = new RandomShapeFactory().Create(10).Random().ToIArea();
+            return View(shapes);
         }
     }
 }

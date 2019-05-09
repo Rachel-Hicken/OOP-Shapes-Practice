@@ -30,9 +30,14 @@ namespace ShapeLibrary.Model.Extensions
             Console.ReadLine();
         }
 
-        public static IList<IArea> ToIArea<T>(this IList<T> shapes) where T : Shape
+//        public static IList<IArea> ToIArea<T>(this IList<T> shapes) where T : Shape
+//        {
+//            return shapes.Select(o => o as IArea).ToList();
+//        }
+
+        public static IList<IArea> ToIArea<T>(this IList<T> objects) 
         {
-            return shapes.Select(o => o as IArea).ToList();
+            return objects.Select(o => o as IArea).ToList();
         }
     }
 }

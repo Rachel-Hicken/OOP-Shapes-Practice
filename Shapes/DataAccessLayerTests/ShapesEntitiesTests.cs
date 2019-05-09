@@ -9,15 +9,15 @@ namespace DataAccessLayer.Tests
         [TestMethod()]
         public void ShapesEntitiesHasDataTest()
         {
-
             var context = new ShapesEntities();
             Assert.IsNotNull(context);
+            Assert.IsNotNull(context.vwShapes);
             Assert.IsTrue(context.vwShapes.Any());
             Assert.AreEqual(3,context.vwShapes.Count());
         }
 
         [TestMethod()]
-        public void ShapesEntitiesChackValuesTest()
+        public void ShapesEntitiesCheckValuesTest()
         {
 
             var context = new ShapesEntities();
