@@ -21,7 +21,7 @@ namespace Shapes
 //        2b. create unit test to test library [DONE]
 // 3. teach entity framework [DONE]
 // 4. answer question that Rachel may have [DONE]
-// 5. template pattern
+// 5. template pattern 
 // Lastly - on your own: review SOLID principles
 
 //    ----------------------------
