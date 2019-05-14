@@ -1,7 +1,7 @@
-﻿using Shapes.Factory;
-using Shapes.Model.Extension;
+﻿using ShapeLibrary.Factory;
+using ShapeLibrary.Model.Extension;
 
-namespace Shapes
+namespace ShapeLibrary
 {
     class Program
     {

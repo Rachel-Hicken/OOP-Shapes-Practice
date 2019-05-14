@@ -1,0 +1,10 @@
+﻿@using ShapesWebApp.Models.Extensions
+
+@model System.Collections.Generic.List<ShapeLibrary.Model.Abstract.IArea>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@Html.Raw(Model.ShowShapes())
