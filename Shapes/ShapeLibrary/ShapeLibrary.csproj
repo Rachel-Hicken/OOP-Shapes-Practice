@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Factory\ShapeFactory.cs" />
+    <Compile Include="Factory\ShapeFactoryException.cs" />
     <Compile Include="Model\Abstract\IArea.cs" />
     <Compile Include="Model\Abstract\Shape.cs" />
     <Compile Include="Model\Concrete\Circle.cs" />

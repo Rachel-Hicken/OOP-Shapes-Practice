@@ -75,6 +75,10 @@
       <Project>{860A9454-0D92-47EA-AF91-88DAA630D03F}</Project>
       <Name>DataAccessLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ShapeLibrary\ShapeLibrary.csproj">
+      <Project>{9E3D18F7-A53C-472F-9C1D-6CDE18610361}</Project>
+      <Name>ShapeLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

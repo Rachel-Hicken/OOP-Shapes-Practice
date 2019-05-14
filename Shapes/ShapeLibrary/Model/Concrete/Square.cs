@@ -3,7 +3,7 @@ using System;
 
 namespace ShapeLibrary.Model.Concrete
 {
-    class Square : Shape
+    public class Square : Shape
     {
         public override double Area => Math.Pow(dimensions[0], 2);
 

@@ -25,7 +25,7 @@ namespace ShapeLibrary.Model.Extension
         public static void ShowShapes<T>(this IList<T> list) where T : IArea
         {
             list.ShowAreas();
-            Console.WriteLine(list.SumAreaArray());
+            Console.WriteLine($"Total Sum of all Shape Areas: {list.SumAreaArray()}");
             Console.ReadLine();
         }
 

@@ -5,7 +5,7 @@ using ShapeLibrary.Model.Concrete;
 
 namespace ShapeLibrary.Factory
 {
-    public class ShapeFactory
+    public partial class ShapeFactory
     {
         private int _randomNumberOfShapes = 0;
 
@@ -27,20 +27,20 @@ namespace ShapeLibrary.Factory
             }
         }
 
-        public List<Shape> RandomShapes(int maxLength = 200)
+        public List<Shape> RandomShapes(int maxDimensionLength = 2)
         {
             var shapes = new List<Shape>();
             var shapeFactory = new ShapeFactory();
-            var randomDimension = new Random(maxLength);
+            var randomDimensionLength = new Random(maxDimensionLength);
             Shape shape;
 
-            var values = Enum.GetValues(typeof(ShapeTypes));
+            var shapeTypeEnumValues = Enum.GetValues(typeof(ShapeTypes));
             var random = new Random();
 
             for (var i=0; i<_randomNumberOfShapes; i++)
             {
-                ShapeTypes randomBar = (ShapeTypes)values.GetValue(random.Next(values.Length));
-                shape = shapeFactory.CreateShape(randomBar, new[] { randomDimension.Next() });
+                var type = (ShapeTypes)shapeTypeEnumValues.GetValue(random.Next(shapeTypeEnumValues.Length));
+                shape = shapeFactory.CreateShape(type, new[] { randomDimensionLength.Next() });
                 shapes.Add(shape);
             }
             return shapes;
@@ -50,6 +50,11 @@ namespace ShapeLibrary.Factory
         public ShapeFactory Create(int numberOfShapes)
         {
             _randomNumberOfShapes = numberOfShapes;
+            if(!(_randomNumberOfShapes > 0))
+            {
+                throw new ShapeFactoryException(string.Format("You must specify the number of random shapes you want to generate"));
+            }
+            
             return this;
         }
     }

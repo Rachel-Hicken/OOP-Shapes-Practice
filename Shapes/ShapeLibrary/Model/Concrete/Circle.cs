@@ -2,7 +2,7 @@
 
 namespace ShapeLibrary.Model.Concrete
 {
-    class Circle : Square
+    public class Circle : Square
     {
         public override double Area =>base.Area * Math.PI;
 
